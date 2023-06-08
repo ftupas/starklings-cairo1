@@ -3,10 +3,9 @@
 // The contract shows that he is the owner of the contract.
 // However, his contract is not working. What's he missing?
 
-// I AM NOT DONE
-
 #[contract]
 mod JoesContract {
+    #[view]
     fn get_owner() -> felt252 {
         'Joe'
     }

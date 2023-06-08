@@ -5,6 +5,7 @@ use debug::PrintTrait;
 const YEAR: u16 = 2050;
 
 mod order {
+    use super::YEAR;
     #[derive(Copy, Drop)]
     struct Order {
         name: felt252,
