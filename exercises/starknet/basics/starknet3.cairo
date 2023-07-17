@@ -24,12 +24,12 @@ mod ProgressTracker {
     }
 
     #[external]
-    fn set_progress(user: ContractAddress, new_progress: u16) {// TODO: assert owner is calling
+    fn set_progress(user: ContractAddress, new_progress: u16) { // TODO: assert owner is calling
     // TODO: set new_progress for user,
     }
 
     #[view]
-    fn get_progress(user: ContractAddress) -> u16 {// Get user progress
+    fn get_progress(user: ContractAddress) -> u16 { // Get user progress
     }
 }
 

@@ -106,14 +106,16 @@ mod test {
         // Deploy ContractB
         let (address_b, _) = deploy_syscall(
             ContractB::TEST_CLASS_HASH.try_into().unwrap(), 0, ArrayTrait::new().span(), false
-        ).unwrap();
+        )
+            .unwrap();
 
         // Deploy ContractA
         let mut calldata = ArrayTrait::new();
         calldata.append(address_b.into());
         let (address_a, _) = deploy_syscall(
             ContractA::TEST_CLASS_HASH.try_into().unwrap(), 0, calldata.span(), false
-        ).unwrap();
+        )
+            .unwrap();
 
         // contract_a is of type IContractADispatcher. Its methods are defined in IContractADispatcherTrait.
         let contract_a = IContractADispatcher { contract_address: address_a };
